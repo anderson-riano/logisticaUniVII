@@ -14,11 +14,11 @@ export const routes: Routes = [
         component: RegistroUserComponent
     },
     {
-        path: 'login',
+        path: 'logeo',
         component: LoginComponent
     },
     {
-        path: 'home',
+        path: '',
         component: HomeComponent
     }
 ];

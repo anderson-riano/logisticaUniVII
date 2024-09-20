@@ -23,6 +23,7 @@ export class LoginComponent  implements OnInit {
 
   Login(){
     console.log(this.frmLogin.value);
+    alert("Redirigiendo...");
   }
 
 }

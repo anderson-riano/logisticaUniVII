@@ -27,6 +27,7 @@ export class RegistroUserComponent  implements OnInit {
 
   Registro(){
     console.log(this.frmRegister.value);
+    alert("Registrado Existosamente");
   }
 
 }
