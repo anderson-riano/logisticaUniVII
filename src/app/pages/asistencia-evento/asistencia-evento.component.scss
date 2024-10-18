@@ -1,0 +1,70 @@
+.asistencia-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    /* Añade espacio entre las filas */
+
+    th,
+    td {
+        padding: 12px 20px;
+        /* Espaciado dentro de las celdas */
+        text-align: left;
+    }
+
+    th {
+        font-weight: bold;
+        border-bottom: 2px solid #ccc;
+    }
+
+    td {
+        border: 1px solid #ccc;
+        /* Bordes ligeros para las celdas */
+        border-radius: 4px;
+    }
+
+    tr {
+        transition: background-color 0.3s;
+        /* Efecto de transición */
+    }
+
+    tr:hover {
+        background-color: #f9f9f9;
+        /* Color al pasar el ratón por encima de la fila */
+    }
+}
+
+ion-card-content {
+    form {
+        padding: 16px;
+        /* Espaciado interno del formulario */
+    }
+
+    .form-item {
+        margin-bottom: 16px;
+        /* Espaciado entre los elementos del formulario */
+
+        ion-label {
+            font-size: 1rem;
+            /* Ajusta el tamaño de la fuente de las etiquetas */
+            color: #666;
+            /* Color más suave para las etiquetas */
+            margin-bottom: 8px;
+            /* Añadir un margen inferior para separarlo del ion-select */
+        }
+
+        ion-select {
+            --padding-start: 12px;
+            /* Aumenta el espaciado interno del select */
+            --padding-end: 12px;
+            --min-height: 50px;
+            /* Aumenta la altura mínima para mejor accesibilidad */
+        }
+
+        ion-button {
+            --border-radius: 8px;
+            /* Botones con bordes redondeados */
+            font-weight: bold;
+            --padding: 12px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencia Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Registro de asistencia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="frmAsistencia" (ngSubmit)="asistencia()">
+          
+          <ion-item class="form-item">
+            <ion-label position="stacked">Nombre del evento</ion-label> <!-- Cambiado a "stacked" -->
+            <ion-select formControlName="evento" placeholder="Seleccionar uno">
+              <ion-select-option *ngFor="let option of eventoList" [value]="option.id">
+                {{ option.nombre }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+      
+          <ion-item class="form-item">
+            <ion-label position="stacked">Nombre del participante</ion-label> <!-- Cambiado a "stacked" -->
+            <ion-select formControlName="usuario" placeholder="Seleccionar uno">
+              <ion-select-option *ngFor="let option of userList" [value]="option.id">
+                {{ option.name }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+      
+          <ion-item class="form-item">
+            <ion-button expand="block" type="submit">Enviar</ion-button>
+          </ion-item>
+      
+        </form>
+      </ion-card-content>      
+    </ion-card>
+  </div>
+
+  <!-- Tabla para mostrar las asistencias -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lista de Asistencias</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <table class="asistencia-table">
+        <thead>
+          <tr>
+            <th>Evento</th>
+            <th>Usuario</th>
+            <th>Fecha de Asistencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asistencia of asistenciaList">
+            <td>{{ asistencia.eventoNombre }}</td>
+            <td>{{ asistencia.usuarioNombre }}</td>
+            <td>{{ asistencia.fecha | date:'short' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

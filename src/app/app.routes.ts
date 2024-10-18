@@ -3,6 +3,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { RegistroUserComponent } from './pages/registro-user/registro-user.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AsistenciaEventoComponent } from './pages/asistencia-evento/asistencia-evento.component';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,9 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent
+    },
+    {
+        path: 'asistencia-evento',
+        component: AsistenciaEventoComponent
     }
 ];
